@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bayestestR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bayestestR/bayestestR_{{ version }}.tar.gz
-  sha256: 6a3b9871fa1c0022572680ea138c3f46463eceb448e257471d15eaf14b91cfd4
+  sha256: 5efbf324b1faf92ea9880bcb76637dbf45ee1b1ade569b12ac7bcede1c91491c
 
 build:
   merge_build_host: True  # [win]
