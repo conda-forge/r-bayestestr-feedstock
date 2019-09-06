@@ -1,4 +1,4 @@
-{% set version = '0.2.2' %}
+{% set version = '0.2.5' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bayestestR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bayestestR/bayestestR_{{ version }}.tar.gz
-  sha256: a941ca187a924feb2a2c6a6b22c77e912336fa72420b582cd496739829292627
+  sha256: 023927d6e890913a4d4174264df7583eda6da9c5f987be4eb0a9446a965ea321
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,10 +25,10 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-insight >=0.3.0
+    - r-insight >=0.4.0
   run:
     - r-base
-    - r-insight >=0.3.0
+    - r-insight >=0.4.0
 
 test:
   commands:
@@ -43,7 +43,8 @@ about:
     Density Interval - HDI; Kruschke, 2015 <doi:10.1016/C2012-0-00477-2>) and indices
     used for null-hypothesis testing (such as ROPE percentage, pd and Bayes factors).
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
@@ -52,8 +53,8 @@ extra:
 # Package: bayestestR
 # Type: Package
 # Title: Understand and Describe Bayesian Models and Posterior Distributions
-# Version: 0.2.2
-# Authors@R: c( person("Dominique",  "Makowski",  email = "dom.makowski@gmail.com", role = c("aut", "cre"),  comment = c(ORCID = "0000-0001-5375-9967")), person("Daniel",  "Ludecke",  role = c("aut"),  email = "d.luedecke@uke.de",  comment = c(ORCID = "0000-0002-8895-3206")), person("Mattan S.",  "Ben-Shachar",  role = c("aut"),  email = "matanshm@post.bgu.ac.il",  comment = c(ORCID = "0000-0002-4287-4801")), person("Michael D.",  "Wilson",  role = c("aut"),  email = "michael.d.wilson@curtin.edu.au",  comment = c(ORCID = "0000-0003-4143-7308")) )
+# Version: 0.2.5
+# Authors@R: c( person("Dominique",  "Makowski",  email = "dom.makowski@gmail.com", role = c("aut", "cre"),  comment = c(ORCID = "0000-0001-5375-9967")), person("Daniel",  "Ldecke",  role = c("aut"),  email = "d.luedecke@uke.de",  comment = c(ORCID = "0000-0002-8895-3206")), person("Mattan S.",  "Ben-Shachar",  role = c("aut"),  email = "matanshm@post.bgu.ac.il",  comment = c(ORCID = "0000-0002-4287-4801")), person("Michael D.",  "Wilson",  role = c("aut"),  email = "michael.d.wilson@curtin.edu.au",  comment = c(ORCID = "0000-0003-4143-7308")), person("Paul-Christian",  "Brkner",  role = c("rev"),  email = "paul.buerkner@gmail.com"), person("Tristan",  "Mahr",  role = c("rev"), email = "tristan.mahr@wisc.edu", comment = c(ORCID = "0000-0002-8890-5116")) )
 # Maintainer: Dominique Makowski <dom.makowski@gmail.com>
 # URL: https://github.com/easystats/bayestestR
 # BugReports: https://github.com/easystats/bayestestR/issues
@@ -62,13 +63,13 @@ extra:
 # Encoding: UTF-8
 # LazyData: true
 # Depends: R (>= 3.0), stats, methods, utils
-# Imports: insight (>= 0.3.0)
-# Suggests: BayesFactor, bridgesampling, brms, broom, covr, dplyr, emmeans, tidyr, GGally, ggplot2, ggridges, KernSmooth, knitr, lme4, logspline, see, rmarkdown, rstan, rstanarm, stringr, testthat
+# Imports: insight (>= 0.4.0)
+# Suggests: BayesFactor, bridgesampling, brms, broom, covr, dplyr, emmeans, GGally, ggplot2, ggridges, KernSmooth, knitr, lme4, logspline, performance, rmarkdown, rstan, rstanarm, see, stringr, testthat, tidyr
 # RoxygenNote: 6.1.1
 # Language: en-GB
 # VignetteBuilder: knitr
 # NeedsCompilation: no
-# Packaged: 2019-06-20 12:12:50 UTC; Dom
-# Author: Dominique Makowski [aut, cre] (<https://orcid.org/0000-0001-5375-9967>), Daniel Ludecke [aut] (<https://orcid.org/0000-0002-8895-3206>), Mattan S. Ben-Shachar [aut] (<https://orcid.org/0000-0002-4287-4801>), Michael D. Wilson [aut] (<https://orcid.org/0000-0003-4143-7308>)
+# Packaged: 2019-08-06 08:45:07 UTC; Dom
+# Author: Dominique Makowski [aut, cre] (<https://orcid.org/0000-0001-5375-9967>), Daniel Ldecke [aut] (<https://orcid.org/0000-0002-8895-3206>), Mattan S. Ben-Shachar [aut] (<https://orcid.org/0000-0002-4287-4801>), Michael D. Wilson [aut] (<https://orcid.org/0000-0003-4143-7308>), Paul-Christian Brkner [rev], Tristan Mahr [rev] (<https://orcid.org/0000-0002-8890-5116>)
 # Repository: CRAN
-# Date/Publication: 2019-06-20 12:50:03 UTC
+# Date/Publication: 2019-08-06 11:20:02 UTC
