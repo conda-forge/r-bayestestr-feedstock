@@ -1,4 +1,4 @@
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bayestestR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bayestestR/bayestestR_{{ version }}.tar.gz
-  sha256: bc8ab85ed0b4005db05a647fbcb34ed272c971a5d41572c0b40eb5910ec713d0
+  sha256: 5fe2378962cb32ee105b10fa506fe9289476e064d39042dcb2e42f730bc444e0
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -38,13 +38,12 @@ test:
 about:
   home: https://github.com/easystats/bayestestR
   license: GPL-3
-  summary: Provides utilities to describe posterior distributions and Bayesian models. It includes
-    point-estimates such as Maximum A Posteriori (MAP), measures of dispersion (Highest
-    Density Interval - HDI; Kruschke, 2015 <doi:10.1016/C2012-0-00477-2>) and indices
-    used for null-hypothesis testing (such as ROPE percentage, pd and Bayes factors).
+  summary: Provides utilities to describe posterior distributions and Bayesian models. It includes point-estimates such as Maximum A Posteriori (MAP), measures of
+    dispersion (Highest Density Interval - HDI; Kruschke, 2015 <doi:10.1016/C2012-0-00477-2>) and indices used for null-hypothesis testing (such as ROPE percentage,
+    pd and Bayes factors).
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
