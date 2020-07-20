@@ -1,4 +1,4 @@
-{% set version = "0.7.0" %}
+{% set version = "0.7.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bayestestR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bayestestR/bayestestR_{{ version }}.tar.gz
-  sha256: 0d06aa33ff9c231e55c462cd14b315482e805b8f8387c99de5347ffbbf673edb
+  sha256: 226a0a3c788e32023a7aaca1339699b609416ebbc96ba26c1e4941f1fa5d02b1
 
 build:
   merge_build_host: true  # [win]
@@ -25,10 +25,10 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-insight >=0.5.0
+    - r-insight >=0.8.4
   run:
     - r-base
-    - r-insight >=0.5.0
+    - r-insight >=0.8.4
 
 test:
   commands:
@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://github.com/easystats/bayestestR
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Provides utilities to describe posterior distributions and Bayesian models. It includes point-estimates such as Maximum A Posteriori (MAP), measures of dispersion (Highest Density Interval - HDI; Kruschke, 2015 <doi:10.1016/C2012-0-00477-2>) and indices used for null-hypothesis testing (such as ROPE percentage,
     pd and Bayes factors).
   license_family: GPL3
