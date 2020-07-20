@@ -25,10 +25,10 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-insight >=0.5.0
+    - r-insight >=0.8.4
   run:
     - r-base
-    - r-insight >=0.5.0
+    - r-insight >=0.8.4
 
 test:
   commands:
@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://github.com/easystats/bayestestR
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Provides utilities to describe posterior distributions and Bayesian models. It includes point-estimates such as Maximum A Posteriori (MAP), measures of dispersion (Highest Density Interval - HDI; Kruschke, 2015 <doi:10.1016/C2012-0-00477-2>) and indices used for null-hypothesis testing (such as ROPE percentage,
     pd and Bayes factors).
   license_family: GPL3
