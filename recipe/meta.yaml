@@ -1,4 +1,4 @@
-{% set version = "0.16.1" %}
+{% set version = "0.17.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bayestestR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bayestestR/bayestestR_{{ version }}.tar.gz
-  sha256: 6d41ff941be8001d16cde3430afb67cc947383eeb58a13e1b79c85185b1b73ab
+  sha256: 28722fa8d91f714ac961b9fc6106916406d4f7b84e9c9babb475ba3bd69a115a
 
 build:
   number: 0
